@@ -31,6 +31,7 @@ namespace RegexProgram
                 Console.WriteLine("Last Name not Valid ");
             }
         }
+
         public void ValidateEmail(string email)
         {
             //abc.xyz@bl.co.in
@@ -44,25 +45,37 @@ namespace RegexProgram
             {
                 Console.WriteLine("Email not Valid ");
             }
+        }
 
-          }
-        public void ValidatePhoneNumber(string phoneNumber)
+        public void ValidateMobileNumber(string mobileNumber)
         {
-            //"91 8380885318"
-            string phoneNum = @"[0-9]{2}[ ][0-9]{10}";  //@"[0-9]{2}/s[0-9]{10}" Both are correct expressions
-            if (Regex.IsMatch(phoneNumber, phoneNum))
+            string mobileNumberPatten = @"[0-9]{1,2}[ ][0-9]{10}"; /*@"[0-9]{1,2}\s[0-9]{10}"*/
+            if (Regex.IsMatch(mobileNumber, mobileNumberPatten))
             {
-                Console.WriteLine("Phone Number is matching with regex");
+                Console.WriteLine("Mobile Number is Valid");
             }
             else
             {
-                Console.WriteLine("Phone Number is not matching with Regex ");
+                Console.WriteLine("Mobile Number not Valid ");
             }
-            Console.ReadLine();
         }
+
         public void ValidatePasswordRoule1(string password)
         {
             string passwordPatten = @"[A-Z a-z 0-9]{8,}";
+            if (Regex.IsMatch(password, passwordPatten))
+            {
+                Console.WriteLine("Password is Valid");
+            }
+            else
+            {
+                Console.WriteLine("Password not Valid ");
+            }
+        }
+
+        public void ValidatePasswordRoule2(string password)
+        {
+            string passwordPatten = "(?=.*[A-Z])[A-Za-z0-9]{8,}";
             if (Regex.IsMatch(password, passwordPatten))
             {
                 Console.WriteLine("Password is Valid");
