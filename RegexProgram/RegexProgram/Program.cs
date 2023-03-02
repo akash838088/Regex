@@ -17,6 +17,7 @@ namespace RegexProgram
             regexPatten.ValidateMobileNumber("91 8380885318");
             regexPatten.ValidatePasswordRoule1("password");
             regexPatten.ValidatePasswordRoule2("pasSword");
+            regexPatten.ValidatePasswordRoule3("pasSword1");
             Console.ReadLine();
 
         }
