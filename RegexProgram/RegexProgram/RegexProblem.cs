@@ -46,6 +46,20 @@ namespace RegexProgram
             }
 
         }
+        public void ValidatePhoneNumber(string phoneNumber)
+        {
+            //"91 8380885318"
+            string phoneNum = @"[0-9]{2}[ ][0-9]{10}";  //@"[0-9]{2}/s[0-9]{10}" Both are correct expressions
+            if (Regex.IsMatch(phoneNumber, phoneNum))
+            {
+                Console.WriteLine("Phone Number is matching with regex");
+            }
+            else
+            {
+                Console.WriteLine("Phone Number is not matching with Regex ");
+            }
+            Console.ReadLine();
+        }
 
 
     }

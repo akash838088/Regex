@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace RegexProgram
@@ -13,6 +14,7 @@ namespace RegexProgram
             RegexPatten regexPatten = new RegexPatten();
             regexPatten.ValidateName("Akash", "Girase");
             regexPatten.ValidateEmail("abc.xyz@bl.co.in");
+            regexPatten.ValidatePhoneNumber("91 8380885318");
             Console.ReadLine();
 
         }
