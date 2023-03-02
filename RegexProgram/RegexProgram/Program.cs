@@ -10,22 +10,16 @@ namespace RegexProgram
     {
         static void Main(string[] args)
         {
-            bool flag = true;
-            while (flag)
-            {
-                Console.WriteLine("Enter the option number");
-                Console.WriteLine("1.Validate first name");
-                Console.WriteLine();
-                int option = Convert.ToInt32(Console.ReadLine());
-                switch (option)
-                {
-                    case 1:
-                        RegexProblem regex = new RegexProblem();
-                        regex.ValidateFirstName("Phoenix");
-                        Console.ReadKey();
-                        break;
-                }
-            }
+            RegexPatten regexPatten = new RegexPatten();
+            regexPatten.ValidateNameFirstName("Akash");
+            regexPatten.ValidateNameLastName("Girase");
+            regexPatten.ValidateEmail("abc@yahoo.com");
+            regexPatten.ValidateMobileNumber("91 8380885318");
+            regexPatten.ValidatePasswordRoule1("password");
+            regexPatten.ValidatePasswordRoule2("pasSword");
+            regexPatten.ValidatePasswordRoule3("pasSwor1");
+            regexPatten.ValidatePasswordRoule4("1234@akk");
+            Console.ReadLine();
         }
     }
 }
