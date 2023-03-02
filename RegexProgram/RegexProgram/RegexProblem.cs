@@ -45,7 +45,7 @@ namespace RegexProgram
                 Console.WriteLine("Email not Valid ");
             }
 
-        }
+          }
         public void ValidatePhoneNumber(string phoneNumber)
         {
             //"91 8380885318"
@@ -59,6 +59,18 @@ namespace RegexProgram
                 Console.WriteLine("Phone Number is not matching with Regex ");
             }
             Console.ReadLine();
+        }
+        public void ValidatePasswordRoule1(string password)
+        {
+            string passwordPatten = @"[A-Z a-z 0-9]{8,}";
+            if (Regex.IsMatch(password, passwordPatten))
+            {
+                Console.WriteLine("Password is Valid");
+            }
+            else
+            {
+                Console.WriteLine("Password not Valid ");
+            }
         }
 
 

@@ -15,6 +15,7 @@ namespace RegexProgram
             regexPatten.ValidateName("Akash", "Girase");
             regexPatten.ValidateEmail("abc.xyz@bl.co.in");
             regexPatten.ValidatePhoneNumber("91 8380885318");
+            regexPatten.ValidatePasswordRoule1("password");
             Console.ReadLine();
 
         }
